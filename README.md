@@ -23,6 +23,12 @@ And add this to your end gcode:
 SET_GCODE_VARIABLE MACRO=RatOS VARIABLE=start_of_print VALUE=False
 ```
 
+Finally make sure you add that variable to your `RatOS` macro in the `MACRO CONFIGURATION` section of your `printer.cfg`
+
+```gcode
+variable_start_of_print: False
+```
+
 Essentially what is happening is in the stow macro we check if this is set, and if it is we assume that we are doing the 
 home->z-tilt->home->bed mesh dance at the start of a print, and we don't stow the probe until we finish the bed mesh.
 
