@@ -2,6 +2,9 @@
 
 This repo is just a copy of my user configs for my V-core-3 3D printer running Ratrigs customized version of klipper, RatOS.
 
+These configs are specific to my setup, I have not made any effort to make them generic, so if you copy them please make sure
+to verify they work with your setup.
+
 ## Extra info
 
 ### Dock location
@@ -32,8 +35,7 @@ variable_start_of_print: False
 Essentially what is happening is in the stow macro we check if this is set, and if it is we assume that we are doing the 
 home->z-tilt->home->bed mesh dance at the start of a print, and we don't stow the probe until we finish the bed mesh.
 
-### PAM
+### Prime blob
 
-Due to the euclid probe we need to override how the included PAM macro works. To do this I skip including the `pam.cfg` and override the 
-`_START_PRINT_BED_MESH` macro in my `euclid.cfg` config. In my user overrides I also call the PAM module to initialize it by adding
-`[pam]` to my user overrides.
+I have overridden the prime blob to move it over and away from the euclid dock. Again depending on your setup this may or
+may not land in a good spot for you.
