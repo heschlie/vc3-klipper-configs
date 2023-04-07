@@ -78,4 +78,4 @@
 #   mjpeg [default] - stable MJPG-streamer
 #camera_streamer=mjpeg
 camera="usb"
-camera_usb_options="-r 1280x720 -f 30 -d /dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera-video-index0"
+camera_usb_options="-r 1280x720 -f 15 -d /dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera-video-index0"
